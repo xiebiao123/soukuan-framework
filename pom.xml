@@ -8,12 +8,13 @@
     <artifactId>soukuan-framework</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>soukuan-common</module>
         <module>soukuan-test</module>
         <module>soukuan-starter</module>
         <module>soukuan-config</module>
+        <module>soukuan-dependencies</module>
     </modules>
-
 
 </project>
