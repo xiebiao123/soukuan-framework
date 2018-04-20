@@ -12,6 +12,7 @@
         <module>soukuan-common</module>
         <module>soukuan-test</module>
         <module>soukuan-starter</module>
+        <module>soukuan-config</module>
     </modules>
 
 
