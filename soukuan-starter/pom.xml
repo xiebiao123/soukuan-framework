@@ -10,6 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>soukuan-starter</artifactId>
-
+    <packaging>pom</packaging>
+    <modules>
+        <module>soukuan-data-source-starter</module>
+    </modules>
 
 </project>
