@@ -1,4 +1,4 @@
-package com.soukuan.propertie;
+package com.soukuan.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

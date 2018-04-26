@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>soukuan-data-source-starter</module>
+        <module>soukuan-swagger-starter</module>
     </modules>
 
 </project>

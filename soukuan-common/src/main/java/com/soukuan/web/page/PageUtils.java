@@ -1,4 +1,4 @@
-package com.soukuan.web;
+package com.soukuan.web.page;
 
 import com.github.pagehelper.PageInfo;
 

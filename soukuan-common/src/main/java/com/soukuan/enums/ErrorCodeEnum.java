@@ -1,11 +1,11 @@
-package com.soukuan.web;
+package com.soukuan.enums;
 
 /**
  * Title 系统通用错误码
  * DateTime 17-4-11 上午9:51
  * Version V1.0.0
  */
-public enum ErrorCode {
+public enum ErrorCodeEnum {
 
     /**
      * 服务器异常
@@ -50,7 +50,7 @@ public enum ErrorCode {
 
     public final String code;
 
-    ErrorCode(String v) {
+    ErrorCodeEnum(String v) {
         code = v;
     }
 

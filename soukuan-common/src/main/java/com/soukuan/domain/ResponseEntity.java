@@ -1,4 +1,4 @@
-package com.soukuan.web;
+package com.soukuan.domain;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,10 +1,9 @@
 package com.soukuan.domain;
 
 import com.github.pagehelper.PageInfo;
-import com.soukuan.web.ErrorCode;
-import com.soukuan.web.PageUtils;
-import com.soukuan.web.ResponseEntity;
-import com.soukuan.web.SimplePageInfo;
+import com.soukuan.enums.ErrorCodeEnum;
+import com.soukuan.web.page.PageUtils;
+import com.soukuan.web.page.SimplePageInfo;
 
 import java.util.List;
 
@@ -86,7 +85,7 @@ public class ResponseEntityBuilder {
      * @return
      */
     public static ResponseEntity failed() {
-        return response(ErrorCode.DEFAULT_ERR_CODE.code, FAILED_BUS_MESG, null);
+        return response(ErrorCodeEnum.DEFAULT_ERR_CODE.code, FAILED_BUS_MESG, null);
     }
 
     /**
@@ -96,7 +95,7 @@ public class ResponseEntityBuilder {
      * @return
      */
     public static ResponseEntity failed(String message) {
-        return response(ErrorCode.DEFAULT_ERR_CODE.code, message, null);
+        return response(ErrorCodeEnum.DEFAULT_ERR_CODE.code, message, null);
     }
 
     /**

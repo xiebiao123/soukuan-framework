@@ -1,7 +1,7 @@
 package com.soukuan.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.soukuan.propertie.DataSourceProperties;
+import com.soukuan.properties.DataSourceProperties;
 import com.soukuan.web.filter.DruidStatFilter;
 import com.soukuan.web.servlet.DruidStatViewServlet;
 import lombok.extern.slf4j.Slf4j;
