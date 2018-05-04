@@ -1,4 +1,4 @@
-package com.soukuan.log.aop;
+package com.soukuan.log.aops;
 
 import com.alibaba.fastjson.JSON;
 import com.soukuan.util.StringUtils;

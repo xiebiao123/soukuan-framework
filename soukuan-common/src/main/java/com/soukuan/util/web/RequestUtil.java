@@ -1,6 +1,7 @@
-package com.wanshifu.common.web.utils;
+package com.soukuan.util.web;
 
-import com.wanshifu.common.utils.StringUtils;
+
+import com.soukuan.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
@@ -46,7 +47,7 @@ public class RequestUtil {
             String host = request.getHeader("Host");
             if ("0:0:0:0:0:0:0:1".equals(request.getRemoteAddr()) || StringUtils.contains(host, "localhost") || StringUtils.contains(host,
                     "127.0.0.1")) {
-                //TODO:获取本地IP
+                //获取本地IP
                 remoteAddr = getLocalAddress();
             }
         }

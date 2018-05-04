@@ -2,6 +2,10 @@ package com.soukuan.web.templ;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import tk.mybatis.mapper.entity.Condition;
 
 import java.lang.reflect.Field;
@@ -14,6 +18,8 @@ import java.util.List;
  * Time 2017/8/17.
  * Version v1.0
  */
+//TODO 需要将不同的实体进行修改
+@CacheConfig(cacheNames = "AbstractService")
 public abstract class AbstractService<T> implements Service<T> {
 
     @Autowired
@@ -37,55 +43,68 @@ public abstract class AbstractService<T> implements Service<T> {
         }
     }
 
+    @CachePut("save")
     public void save(T model) {
         mapper.insertSelective(model);
     }
 
+    @CachePut("saveList")
     public void save(List<T> models) {
         mapper.insertList(models);
     }
 
+    @CacheEvict(value="find", allEntries=true)
     public int deleteById(Object id) {
         return mapper.deleteByPrimaryKey(id);
     }
 
+    @CacheEvict(value="deleteByIds", allEntries=true)
     public int deleteByIds(String ids) {
         return mapper.deleteByIds(ids);
     }
 
+    @CachePut("update")
     public int update(T model) {
          return mapper.updateByPrimaryKeySelective(model);
     }
 
+    @Cacheable("findById")
     public T findById(Object id) {
         return mapper.selectByPrimaryKey(id);
     }
 
+    @Cacheable("findByIds")
     public List<T> findByIds(String ids) {
         return mapper.selectByIds(ids);
     }
 
+    @Cacheable("findByCondition")
     public List<T> findByCondition(Condition condition) {
         return mapper.selectByCondition(condition);
     }
 
+    @Cacheable("findAll")
     public List<T> findAll() {
         return mapper.selectAll();
     }
 
+    @Cacheable("countByCondition")
     public int countByCondition(Condition condition){return  mapper.selectCountByCondition(condition);}
 
     @Override
+    @Cacheable("findOne")
     public T findOne(T t) {
         return mapper.selectOne(t);
     }
 
     @Override
+    @Cacheable("find")
     public List<T> find(T t) {
         return mapper.select(t);
     }
 
     @Override
+    @Cacheable("findBy")
     public T findBy(String fieldName, Object value){
         try {
             T model = modelClass.newInstance();

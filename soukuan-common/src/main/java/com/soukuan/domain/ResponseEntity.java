@@ -17,14 +17,17 @@ import java.util.Map;
 public class ResponseEntity {
 
     @ApiModelProperty(value = "返回状态码", example = "200")
-    private final String retCode;
+    private String retCode;
 
     @ApiModelProperty(value = "返回消息，仅当retCode不为200时不为空")
-    private final String retMesg;
+    private String retMesg;
 
     @ApiModelProperty(value = "返回的具体业务对象")
-    private final Object retData;
+    private Object retData;
 
+    public ResponseEntity (){
+
+    }
 
     public ResponseEntity(String retCode, String retMesg, Object retData) {
         this.retCode = retCode;

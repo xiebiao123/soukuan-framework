@@ -1,6 +1,6 @@
 package com.soukuan.configuration;
 
-import com.soukuan.log.aop.DaoLogAspect;
+import com.soukuan.log.aops.DaoLogAspect;
 import com.soukuan.properties.DaoLogAopProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.soukuan.log.aop;
+package com.soukuan.log.aops;
 
 import com.alibaba.fastjson.JSON;
 import com.soukuan.util.StringUtils;
@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class ControllerLogAspect implements MethodInterceptor {
 
-    private final Logger logger = LoggerFactory.getLogger(ControllerLogAspect.class);
+    private final Logger logger = LoggerFactory.getLogger("[client]");
 
     @Override
     public Object invoke(MethodInvocation methodInvocation) throws Throwable {

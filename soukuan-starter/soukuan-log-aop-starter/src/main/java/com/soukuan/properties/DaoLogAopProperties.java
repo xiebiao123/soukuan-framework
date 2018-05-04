@@ -12,7 +12,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = DaoLogAopProperties.PREFIX)
 public class DaoLogAopProperties {
 
-    public static final String PREFIX = "wanshifu.daoLogAop";
+    public static final String PREFIX = "soukuan.dao.log.aop";
+
+    private static final String DEFAULT_POINTCUT = "execution(public * com.soukuan.mapper.*.*(..))";
 
     private boolean enable = true;
 
@@ -27,7 +29,7 @@ public class DaoLogAopProperties {
     }
 
     public String getDaoLogPointcut() {
-        return StringUtils.isNotEmpty(this.daoLogPointcut) ? this.daoLogPointcut : "execution(public * com.wanshifu.mapper.*.*(..))";
+        return StringUtils.isNotEmpty(this.daoLogPointcut) ? this.daoLogPointcut : DEFAULT_POINTCUT;
     }
 
     public void setDaoLogPointcut(String daoLogPointcut) {

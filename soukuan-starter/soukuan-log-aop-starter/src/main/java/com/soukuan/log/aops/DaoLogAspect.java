@@ -1,4 +1,4 @@
-package com.soukuan.log.aop;
+package com.soukuan.log.aops;
 
 import com.alibaba.fastjson.JSON;
 import com.soukuan.util.StringUtils;
@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class DaoLogAspect implements MethodInterceptor{
 
-    private final Logger logger = LoggerFactory.getLogger("[mapper ]");
+    private final Logger logger = LoggerFactory.getLogger("[mapper]");
 
     private final static int LOG_RET_STR_LEN = 100;
 

@@ -1,21 +1,19 @@
 package com.soukuan.properties;
 
 import com.soukuan.util.StringUtils;
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
  * Time 2017/5/31.
  * Version v1.0
  */
 @ConfigurationProperties(prefix = ControllerLogAopProperties.PREFIX)
 public class ControllerLogAopProperties {
 
-    public static final String PREFIX = "wanshifu.controllerLogAop";
+    public static final String PREFIX = "soukuan.controller.log.aop";
 
-    private static final String DEFAULT_POINTCUT = "execution(public * com.wanshifu.controller.*.*(..))";
+    private static final String DEFAULT_POINTCUT = "execution(public * com.soukuan.client.*.*(..))";
 
     private boolean enable = true;
 

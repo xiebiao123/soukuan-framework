@@ -5,7 +5,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
  * Time 2017/5/31.
  * Version v1.0
  */
@@ -40,6 +39,8 @@ public class RedisProperties {
      * redis config testOnReturn
      */
     private boolean redisPoolTestOnReturn=false;
+
+    private int database = 0;
 
     /**
      * redis host

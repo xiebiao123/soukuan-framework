@@ -11,5 +11,12 @@
 
     <artifactId>soukuan-log-aop-starter</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+    </dependencies>
 
 </project>

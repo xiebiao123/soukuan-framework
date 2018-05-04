@@ -1,6 +1,6 @@
 package com.soukuan.configuration;
 
-import com.soukuan.log.aop.ControllerLogAspect;
+import com.soukuan.log.aops.ControllerLogAspect;
 import com.soukuan.properties.ControllerLogAopProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
