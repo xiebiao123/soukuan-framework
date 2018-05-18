@@ -127,7 +127,7 @@ public class SwaggerConfiguration {
     }
 
     @Bean
-    UiConfiguration uiConfig() {
+    public UiConfiguration uiConfig() {
         return new UiConfiguration(
                 "validatorUrl",// url
                 "none",       // docExpansion          => none | list
