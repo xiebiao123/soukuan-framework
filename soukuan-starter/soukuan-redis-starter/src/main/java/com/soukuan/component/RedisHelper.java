@@ -336,7 +336,7 @@ public class RedisHelper {
             if (jedis.exists(key)) {
                 jedis.del(key);
             }
-            result = jedis.rpush(key, (String[]) value.toArray());
+            result = jedis.rpush(key, value.toArray(new String[value.size()]));
             if (cacheSeconds != 0) {
                 jedis.expire(key, cacheSeconds);
             }
