@@ -16,6 +16,7 @@
         <module>soukuan-swagger-starter</module>
         <module>soukuan-redis-starter</module>
         <module>soukuan-log-aop-starter</module>
+        <module>soukuan-test-starter</module>
     </modules>
 
     <dependencies>
