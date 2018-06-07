@@ -31,7 +31,7 @@
         <jedis-version>2.9.0</jedis-version>
         <protostuff-core-version>1.5.6</protostuff-core-version>
         <protostuff-runtime-version>1.5.6</protostuff-runtime-version>
-        <mysql-version>5.1.41</mysql-version>
+        <mysql-version>8.0.11</mysql-version>
     </properties>
 
     <modules>
