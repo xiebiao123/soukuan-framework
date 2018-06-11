@@ -13,7 +13,7 @@ public class ControllerLogAopProperties {
 
     public static final String PREFIX = "soukuan.controller.log.aop";
 
-    private static final String DEFAULT_POINTCUT = "execution(public * com.soukuan.client.*.*(..))";
+    private static final String DEFAULT_POINTCUT = "execution(public * com.soukuan.controller.*.*(..))";
 
     private boolean enable = true;
 

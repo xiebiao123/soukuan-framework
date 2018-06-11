@@ -61,15 +61,16 @@ public class SwaggerConfiguration {
     public Docket petApi() {
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .select()
+                //扫描的包路径
                 .apis(RequestHandlerSelectors.any())
+                //扫描的URL
                 .paths(paths())
                 .build()
                 .pathMapping("/")
-                .directModelSubstitute(LocalDate.class,
-                        String.class)
+                //类型的转化
+                .directModelSubstitute(LocalDate.class,String.class)
                 .genericModelSubstitutes(ResponseEntity.class)
-                .alternateTypeRules(
-                        AlternateTypeRules.newRule(typeResolver.resolve(DeferredResult.class,
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(DeferredResult.class,
                                 typeResolver.resolve(ResponseEntity.class, WildcardType.class)),
                                 typeResolver.resolve(WildcardType.class)))
                 .useDefaultResponseMessages(false)
@@ -81,9 +82,12 @@ public class SwaggerConfiguration {
                 .enableUrlTemplating(false)
                 .apiInfo(apiInfo())
                 .tags(new Tag("Pet Service", "All apis relating to pets"));
+
+        //更改请求的host
         if(StringUtils.isNotEmpty(swaggerConfigProperties.getHost())){
             docket.host(swaggerConfigProperties.getHost());
         }
+        //为所有操作添加默认参数
         if(CollectionUtils.isNotEmpty(swaggerConfigProperties.getGlobalOperationParameters())){
             List<Parameter> parameters = new ArrayList<>(swaggerConfigProperties.getGlobalOperationParameters().size());
             for (GlobalParameter globalParameter : swaggerConfigProperties.getGlobalOperationParameters()) {

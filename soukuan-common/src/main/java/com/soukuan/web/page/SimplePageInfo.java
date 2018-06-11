@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
  * Time 2017/5/19.
  * Version v1.0
  */
@@ -37,6 +36,7 @@ public class SimplePageInfo<T> {
     }
 
     public SimplePageInfo(List<T> list) {
+        this.list = list;
     }
 
 }

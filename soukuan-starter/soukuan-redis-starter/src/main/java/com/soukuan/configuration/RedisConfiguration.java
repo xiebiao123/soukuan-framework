@@ -25,6 +25,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import javax.annotation.Resource;
 import java.lang.reflect.Method;
 
 /**
@@ -40,7 +41,7 @@ import java.lang.reflect.Method;
 @EnableCaching //加上这个注解是的支持缓存注解
 public class RedisConfiguration extends CachingConfigurerSupport {
 
-    @Autowired
+    @Resource
     private RedisProperties redisProperties;
 
     /**
