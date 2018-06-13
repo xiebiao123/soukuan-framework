@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
+ * Author xiebiao@soukuan.com
  * Time 2018/3/20.
  * Version v1.0
  */

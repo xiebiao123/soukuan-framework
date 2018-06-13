@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Title 分页工具类
- * Author shenxin@wshifu.com
+ * Author xiebiao@wshifu.com
  * DateTime  17-8-1.
  * Version V1.0.0
  */

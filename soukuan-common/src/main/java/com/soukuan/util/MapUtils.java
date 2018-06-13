@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
+ * Author xiebiao@soukuan.com
  * Time 2017/11/15.
  * Version v1.0
  */

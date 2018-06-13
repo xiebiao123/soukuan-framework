@@ -13,7 +13,7 @@ import java.util.*;
 /**
  * Jedis Cache 工具类
  *
- * @author shenxin
+ * @author xiebiao
  * @version 2015-9-21
  */
 @Slf4j

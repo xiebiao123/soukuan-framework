@@ -4,7 +4,6 @@ import com.soukuan.util.function.CheckedConsumer;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
  * Time 2017/6/30.
  * Version v1.0
  */

@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 
 /**
 * Title 对象操作工具类, 继承org.apache.commons.lang3.ObjectUtils类
-* Author shenxin@wshifu.com
+* Author xiebiao@wshifu.com
 * DateTime  17-07-19.
 * Version V1.0.0
 */

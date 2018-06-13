@@ -4,7 +4,6 @@ import java.util.Objects;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
  * Time 2017/9/30.
  * Version v1.0
  */

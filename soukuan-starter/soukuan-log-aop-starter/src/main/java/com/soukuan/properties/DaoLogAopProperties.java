@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
+ * Author xiebiao@soukuan.com
  * Time 2017/5/31.
  * Version v1.0
  */

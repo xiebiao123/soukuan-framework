@@ -10,7 +10,6 @@ import java.util.Enumeration;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
  * Time 2017/5/23.
  * Version v1.0
  */

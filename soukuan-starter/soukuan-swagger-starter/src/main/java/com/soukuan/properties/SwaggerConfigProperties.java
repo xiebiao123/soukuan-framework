@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Title
- * Author jirenhe@wanshifu.com
+ * Author xiebiao@soukuan.com
  * Time 2017/5/31.
  * Version v1.0
  */
@@ -24,7 +24,7 @@ public class SwaggerConfigProperties {
     private boolean enable = true;
 
     /**
-     * 作者，默认wanshifu
+     * 作者，默认soukuan
      */
     private String author = "soukuan";
 
