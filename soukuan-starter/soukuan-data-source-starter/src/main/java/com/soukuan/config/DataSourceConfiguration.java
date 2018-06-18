@@ -69,13 +69,18 @@ public class DataSourceConfiguration {
     public ServletRegistrationBean druidStatViewServlet() {
         ServletRegistrationBean registration = new ServletRegistrationBean(new DruidStatViewServlet());
         registration.addUrlMappings(dataSourceProperties.getServlet().getUrlPatterns());
+        //白名单IP
         registration.addInitParameter("allow", dataSourceProperties.getServlet().getAllow());
+        //黑名单IP
         registration.addInitParameter("deny", dataSourceProperties.getServlet().getDeny());
+        //登录查看信息的账号密码.
+        registration.addInitParameter("isNeedLogin", dataSourceProperties.getServlet().isNeedLogin() + "");
         registration.addInitParameter("loginUsername", dataSourceProperties.getServlet().getLoginUsername());
         registration.addInitParameter("loginPassword", dataSourceProperties.getServlet().getLoginPassword());
+        //是否能够重置数据.
         registration.addInitParameter("resetEnable", dataSourceProperties.getServlet().isResetEnable() + "");
+        //关闭session统计，用户每次访问IP不同报错
         registration.addInitParameter("sessionStatEnable", dataSourceProperties.getServlet().isSessionStatEnable() + "");
-        registration.addInitParameter("isNeedLogin", dataSourceProperties.getServlet().isNeedLogin() + "");
         log.info("【soukuan spring boot component】 'DruidDataSource servlet' init successful!");
         return registration;
     }
