@@ -27,6 +27,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 import javax.annotation.Resource;
 import java.lang.reflect.Method;
+import java.util.Objects;
 
 /**
  * Title
@@ -38,7 +39,7 @@ import java.lang.reflect.Method;
 @ConditionalOnClass(Jedis.class)
 @EnableConfigurationProperties(RedisProperties.class)
 @ConditionalOnProperty(prefix = RedisProperties.PREFIX, name = "enable", matchIfMissing = true)
-@EnableCaching //加上这个注解是的支持缓存注解
+//@EnableCaching //加上这个注解是的支持缓存注解
 public class RedisConfiguration extends CachingConfigurerSupport {
 
     @Resource
@@ -58,7 +59,9 @@ public class RedisConfiguration extends CachingConfigurerSupport {
                 sb.append(o.getClass().getName()).append(".");
                 sb.append(method.getName()).append(".");
                 for (Object obj : objects) {
-                    sb.append(obj.toString());
+                    if(Objects.nonNull(obj)){
+                        sb.append(obj.toString());
+                    }
                 }
                 log.info("keyGenerator=" + sb.toString());
                 return sb.toString();
