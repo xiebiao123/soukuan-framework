@@ -7,7 +7,7 @@
     <groupId>com.soukuan</groupId>
     <artifactId>soukuan-framework</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,8 +21,6 @@
         <druid-version>1.0.29</druid-version>
         <tk.mybatis-version>1.1.0</tk.mybatis-version>
         <mybatis-spring-boot-starter-version>1.2.0</mybatis-spring-boot-starter-version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
         <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
@@ -61,7 +59,6 @@
                 <artifactId>lombok</artifactId>
                 <version>1.16.20</version>
             </dependency>
-
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -72,13 +69,6 @@
                 <artifactId>pagehelper</artifactId>
                 <version>5.0.3</version>
             </dependency>
-
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.20</version>
-            </dependency>
-
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
